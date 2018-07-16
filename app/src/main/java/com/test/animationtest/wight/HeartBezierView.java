@@ -87,6 +87,14 @@ public class HeartBezierView extends RelativeLayout implements View.OnClickListe
         super.onDraw(canvas);
     }
 
+    /**
+     * 获取屏幕的宽高并设置对应的数据点和控制点
+     *
+     * @param width
+     * @param height
+     * @param oldWidth
+     * @param oldHeight
+     */
     @Override
     protected void onSizeChanged(int width, int height, int oldWidth, int oldHeight) {
         super.onSizeChanged(width, height, oldWidth, oldHeight);
@@ -137,6 +145,15 @@ public class HeartBezierView extends RelativeLayout implements View.OnClickListe
 
         addStar();
         return true;
+    }
+
+    public void startHeart() {
+        mStartPoint = new Point(mScreenWidth / 2, mScreenHeight);
+        mEndPoint = new Point((int) (mScreenWidth / 2 + 150 * mRandom.nextFloat()), 0);
+        mConOnePoint = new Point((int) (mScreenWidth * mRandom.nextFloat()), (int) (mScreenHeight * 3 * mRandom.nextFloat() / 4));
+        mConTwoPoint = new Point(0, (int) (mScreenHeight * mRandom.nextFloat() / 4));
+
+        addStar();
     }
 
     protected void addStar() {

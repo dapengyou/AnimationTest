@@ -18,7 +18,11 @@
         </activity>
         <activity android:name=".FragmentAnimationActivity" />
         <activity android:name=".TweenAnimationActivity" />
-        <activity android:name=".PropertyAnimationActivity"></activity>
+        <activity android:name=".PropertyAnimationActivity" />
+        <activity android:name=".TranslateAnimationActivity" />
+        <activity android:name=".ScaleAnimationActivity" />
+        <activity android:name=".RotateAnimationActivity" />
+        <activity android:name=".AlphaAnimationActivity"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?><!--平移动画-->
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--// 以下参数是4种动画效果的公共属性,即都有的属性-->
+    <translate
+        android:duration="3000"
+        android:fillAfter="false"
+        android:fillBefore="true"
+        android:fillEnabled="true"
+        android:repeatCount="infinite"
+        android:interpolator = "@android:anim/linear_interpolator"
+        android:repeatMode="restart"
+        android:startOffset="1000"
+
+        android:fromXDelta="0"
+        android:toXDelta="500"
+        android:fromYDelta="0"
+        android:toYDelta="500" />
+
+</set><!--// 动画持续时间（ms），必须设置，动画才有效果--><!--android:duration="3000"--><!--&lt;!&ndash;// 动画延迟开始时间（ms）&ndash;&gt;--><!--android:startOffset ="1000"--><!--&lt;!&ndash;// 动画播放完后，视图是否会停留在动画开始的状态，默认为true&ndash;&gt;--><!--android:fillBefore = "true"--><!--&lt;!&ndash;// 动画播放完后，视图是否会停留在动画结束的状态，优先于fillBefore值，默认为false&ndash;&gt;--><!--android:fillAfter = “false”--><!--&lt;!&ndash;// 是否应用fillBefore值，对fillAfter值无影响，默认为true&ndash;&gt;--><!--android:fillEnabled= “true”--><!--&lt;!&ndash;// 选择重复播放动画模式，restart代表正序重放，reverse代表倒序回放，默认为restart|&ndash;&gt;--><!--android:repeatMode= “restart”--><!--&lt;!&ndash;// 重放次数（所以动画的播放次数=重放次数+1），为infinite时无限重复&ndash;&gt;--><!--android:repeatCount = “0”--><!--&lt;!&ndash;// 插值器，即影响动画的播放速度,下面会详细讲&ndash;&gt;--><!--android:interpolator = @[package:]anim/interpolator_resource-->
+
+    <!--&lt;!&ndash;// 以下参数是平移动画特有的属性&ndash;&gt;--><!--&lt;!&ndash;// 视图在水平方向x 移动的起始值&ndash;&gt;--><!--android:fromXDelta="0"--><!--&lt;!&ndash;// 视图在水平方向x 移动的结束值&ndash;&gt;--><!--android:toXDelta="500"-->
+
+    <!--&lt;!&ndash;// 视图在竖直方向y 移动的起始值&ndash;&gt;--><!--android:fromYDelta="0"--><!--&lt;!&ndash;// 视图在竖直方向y 移动的结束值&ndash;&gt;--><!--android:toYDelta="500"-->
