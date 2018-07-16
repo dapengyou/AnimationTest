@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(this, TweenAnimationActivity.class));
                 break;
             case R.id.bt_shuxing:
-                startActivity(new Intent(this, ShuxinAnimationActivity.class));
+                startActivity(new Intent(this, PropertyAnimationActivity.class));
                 break;
         }
     }
