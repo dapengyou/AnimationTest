@@ -57,19 +57,22 @@ dependencies {
 task copyTask {
     doLast {
         def fileName = "app-release.apk"
+//        拷贝文件的始发地
         def sourceFile = "./build/outputs/apk/release/" + fileName
 
         def time = new java.text.SimpleDateFormat("yyyy-MM-dd").format(new Date())
 
-
+//        指定文件拷贝的目的地
         def destationFile = new File(project.getProjectDir().path)
         println destationFile.toString()
 
         def appName = "${time}_release.apk"
         try {
+//            判断文件是否存在
             if (!destationFile.exists()) {
                 destationFile.createNewFile()
             }
+            //拷贝
             copy {
                 from sourceFile
                 into destationFile
