@@ -10,10 +10,32 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
+    //签名
+    signingConfigs {
+        release {
+            storeFile file("animation_test.jks")
+            storePassword "123456"
+            keyAlias "key"
+            keyPassword "123456"
+        }
+        debug {
+            storeFile file("animation_test.jks")
+            storePassword "123456"
+            keyAlias "key"
+            keyPassword "123456"
+        }
+    }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled false         //不启用Proguard
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            minifyEnabled false        //不启用Proguard
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
         }
     }
 }
@@ -30,4 +52,36 @@ dependencies {
     implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 
+}
+
+task copyTask {
+    doLast {
+        def fileName = "app-release.apk"
+        def sourceFile = "./build/outputs/apk/release/" + fileName
+
+        def time = new java.text.SimpleDateFormat("yyyy-MM-dd").format(new Date())
+
+
+        def destationFile = new File(project.getProjectDir().path)
+        println destationFile.toString()
+
+        def appName = "${time}_release.apk"
+        try {
+            if (!destationFile.exists()) {
+                destationFile.createNewFile()
+            }
+            copy {
+                from sourceFile
+                into destationFile
+
+                rename {
+                    appName
+                }
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace()
+        }
+
+    }
 }
