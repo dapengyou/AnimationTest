@@ -1,4 +1,4 @@
-package com.test.animationtest;
+package com.test.animationtest.tween_animation;
 
 import android.graphics.drawable.AnimationDrawable;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +7,8 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
+
+import com.test.animationtest.R;
 
 public class ScaleAnimationActivity extends AppCompatActivity {
 

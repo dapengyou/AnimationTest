@@ -1,10 +1,12 @@
-package com.test.animationtest;
+package com.test.animationtest.tween_animation;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
+
+import com.test.animationtest.R;
 
 public class TranslateAnimationActivity extends AppCompatActivity {
     private ImageView mImageView;

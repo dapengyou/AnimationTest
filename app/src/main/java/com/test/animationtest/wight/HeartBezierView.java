@@ -101,9 +101,13 @@ public class HeartBezierView extends RelativeLayout implements View.OnClickListe
         this.mScreenHeight = height;
         this.mScreenWidth = width;
 
+        //开始点：（屏幕宽度的一半，0）
         mStartPoint = new Point(mScreenWidth / 2, 0);
+        //结束点：（屏幕宽度的一半，屏总高）
         mEndPoint = new Point(mScreenWidth / 2, mScreenHeight);
+        //第一个控制点：（屏总宽，屏高的四分之三）
         mConOnePoint = new Point(mScreenWidth, mScreenHeight * 3 / 4);
+        //第二个控制点：（0，屏高的四分之一）
         mConTwoPoint = new Point(0, mScreenHeight / 4);
 
         setBackgroundColor(Color.WHITE);
@@ -147,15 +151,6 @@ public class HeartBezierView extends RelativeLayout implements View.OnClickListe
         return true;
     }
 
-    public void startHeart() {
-        mStartPoint = new Point(mScreenWidth / 2, mScreenHeight);
-        mEndPoint = new Point((int) (mScreenWidth / 2 + 150 * mRandom.nextFloat()), 0);
-        mConOnePoint = new Point((int) (mScreenWidth * mRandom.nextFloat()), (int) (mScreenHeight * 3 * mRandom.nextFloat() / 4));
-        mConTwoPoint = new Point(0, (int) (mScreenHeight * mRandom.nextFloat() / 4));
-
-        addStar();
-    }
-
     protected void addStar() {
         Bitmap starBitmap = drawStar(mColors[mRandom.nextInt(mColors.length)]);
         final ImageView imageView = new ImageView(getContext());
@@ -178,6 +173,7 @@ public class HeartBezierView extends RelativeLayout implements View.OnClickListe
         valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
+                //获取点的值
                 Point point = (Point) animation.getAnimatedValue();
                 imageView.setX(point.x);
                 imageView.setY(point.y);

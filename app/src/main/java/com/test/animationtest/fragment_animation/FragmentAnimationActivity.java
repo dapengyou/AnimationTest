@@ -1,4 +1,4 @@
-package com.test.animationtest;
+package com.test.animationtest.fragment_animation;
 
 import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.Drawable;
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+
+import com.test.animationtest.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

@@ -1,4 +1,4 @@
-package com.test.animationtest;
+package com.test.animationtest.tween_animation;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
+
+import com.test.animationtest.R;
 
 public class RotateAnimationActivity extends AppCompatActivity {
     private ImageView mIvImage;

@@ -16,15 +16,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".FragmentAnimationActivity" />
-        <activity android:name=".TweenAnimationActivity" />
-        <activity android:name=".PropertyAnimationActivity" />
-        <activity android:name=".TranslateAnimationActivity" />
-        <activity android:name=".ScaleAnimationActivity" />
-        <activity android:name=".RotateAnimationActivity" />
-        <activity android:name=".AlphaAnimationActivity" />
-        <activity android:name=".GroupAnimationActivity" />
-        <activity android:name=".ChangeActivity"></activity>
+        <activity android:name=".fragment_animation.FragmentAnimationActivity" />
+        <activity android:name=".tween_animation.TweenAnimationActivity" />
+        <activity android:name=".property_animation.PropertyAnimationActivity" />
+        <activity android:name=".tween_animation.TranslateAnimationActivity" />
+        <activity android:name=".tween_animation.ScaleAnimationActivity" />
+        <activity android:name=".tween_animation.RotateAnimationActivity" />
+        <activity android:name=".tween_animation.AlphaAnimationActivity" />
+        <activity android:name=".tween_animation.GroupAnimationActivity" />
+        <activity android:name=".tween_animation.ChangeActivity" />
+        <activity android:name=".property_animation.ValueAnimatorActivity" />
+        <activity android:name=".property_animation.ObjectAnimatorActivity" />
+        <activity android:name=".property_animation.ValueObjectActivity"></activity>
     </application>
 
 </manifest>

@@ -6,6 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.test.animationtest.fragment_animation.FragmentAnimationActivity;
+import com.test.animationtest.property_animation.PropertyAnimationActivity;
+import com.test.animationtest.tween_animation.TweenAnimationActivity;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;

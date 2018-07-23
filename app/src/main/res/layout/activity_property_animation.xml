@@ -4,7 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PropertyAnimationActivity">
+    android:orientation="vertical"
+    tools:context=".property_animation.PropertyAnimationActivity">
+
+    <Button
+        android:id="@+id/bt_value_animator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ValueAnimator" />
+    <Button
+        android:id="@+id/bt_object_animator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ObjectAnimator" />
 
     <com.test.animationtest.wight.HeartBezierView
         android:layout_width="match_parent"

@@ -5,12 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".tween_animation.TranslateAnimationActivity">
+    tools:context=".property_animation.ValueObjectActivity">
 
-    <ImageView
-        android:id="@+id/iv_image"
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:src="@mipmap/heart" />
+        android:text="点击屏幕出现心" />
+
+    <com.test.animationtest.wight.HeartBezierView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.test.animationtest.wight.HeartBezierView>
 </LinearLayout>
